@@ -405,7 +405,7 @@ class LizardFactory(AssetFactory):
         super().__init__(factory_seed, coarse)
         self.bvh = bvh
 
-    def create_asset(self, i, animate=False, rigging=False, cloth=False, **kwargs):    
+    def create_asset(self, i, animate=False, rigging=False, simulate=False, **kwargs):    
         genome = lizard_genome()
         root, parts = creature.genome_to_creature(genome, name=f'lizard({self.factory_seed}, {i})')
         
